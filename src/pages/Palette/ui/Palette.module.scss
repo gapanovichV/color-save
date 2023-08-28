@@ -1,0 +1,19 @@
+.Palette {
+
+}
+
+.Header {
+  height: 6vh;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffff;
+}
+
+.Colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  width: 100%;
+  height: 94vh;
+}

@@ -1,0 +1,10 @@
+@import "reset";
+@import "variables/global";
+
+.app {
+  font: var(--font-m);
+}
+
+button {
+  cursor: pointer;
+}
