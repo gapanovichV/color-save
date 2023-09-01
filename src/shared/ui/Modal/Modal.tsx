@@ -9,7 +9,7 @@ interface ModalProps {
   onClose?: () => void;
 }
 export const Modal  = (props: ModalProps) => {
-  const {className, children, isOpen,onClose} = props
+  const {className, children, isOpen, onClose} = props
 
   const handleClickClose = () => {
     if (onClose) {
