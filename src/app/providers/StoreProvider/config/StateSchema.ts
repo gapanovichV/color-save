@@ -1,5 +1,5 @@
-import { PaletteSchema } from 'entities/Palette';
+import {ISchema} from 'entities/Palette';
 
 export interface StateSchema {
-  palette: PaletteSchema[];
+  palette: ISchema;
 }

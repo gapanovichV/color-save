@@ -1,8 +1,8 @@
-.Palette {
-
+.palette {
+  background-color: aquamarine;
 }
 
-.Header {
+.header {
   height: 6vh;
   padding: 0 2rem;
   display: flex;
@@ -11,9 +11,93 @@
   background-color: #ffff;
 }
 
-.Colors {
+.colors {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   width: 100%;
   height: 94vh;
+}
+
+.color_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+
+.button {
+  display: flex;
+  gap: 15px;
+  button {
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 1rem;
+    border-radius: 7px;
+    background: #A855F7;
+    transition: all 0.3s ease-in-out;
+
+    &:last-child{
+      background: #FD5355;
+    }
+    &:hover{
+      background: #2B3B54;
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+  }
+}
+.code_color {
+  font-size: 22px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 4px 3px 3px rgba(0,0,0, 0.3);
+  pointer-events: none;
+}
+.modal_btn {
+  margin-top: 15px;
+  width: 100%;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  background: #A855F7;
+}
+
+.delete_color {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 16px 10px;
+  background: transparent;
+  filter: drop-shadow(0 3px 0.3rem rgba(0,0,0,0.4));
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
 }

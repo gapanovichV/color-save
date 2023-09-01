@@ -1,11 +1,12 @@
-import { nanoid } from 'nanoid'
-import slugify from "react-slugify";
 import chroma from "chroma-js";
+import { nanoid } from 'nanoid'
 import classNames from "classnames";
-import cls from './AddPalette.module.scss'
-import {ChangeEvent, useState} from "react";
-import {paletteActions, PaletteSchema} from "entities/Palette";
+import slugify from "react-slugify";
 import {useDispatch} from "react-redux";
+import {ChangeEvent, useState} from "react";
+import cls from './AddPalette.module.scss'
+import {paletteActions, PaletteSchema} from "entities/Palette";
+import {ReactComponent as Plus} from "shared/assets/icons/plus.svg";
 
 interface AddPaletteProps {
     className?: string
@@ -29,7 +30,7 @@ export const AddPalette  = ({className}: AddPaletteProps) => {
       id: nanoid(),
       colors: generateColors()
     }
-    dispatch(paletteActions.addNewPalette(newPalette))
+    dispatch(paletteActions.addPalette(newPalette))
     setPaletteName('')
   }
 
@@ -37,7 +38,7 @@ export const AddPalette  = ({className}: AddPaletteProps) => {
     <div className={classNames(cls.AddPalette, className)}>
         <div className={classNames(cls.InputBox, className)}>
           <input required onChange={(e: ChangeEvent<HTMLInputElement> ) => setPaletteName(e.target.value)} placeholder='Create Palette...' value={paletteName} type="text" />
-          <button type={"button"} onClick={() => addPalette()}>+</button>
+          <button type={"button"} onClick={() => addPalette()}><Plus/></button>
         </div>
     </div>
   );

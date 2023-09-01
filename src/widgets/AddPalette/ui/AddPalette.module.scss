@@ -9,14 +9,22 @@
 }
 
 .InputBox {
+  display: flex;
+  align-items: center;
   background-color: #ffff;
   border-radius: 15px;
   padding: 0 0 0 15px;
   button {
+    display: flex;
     margin-left: 10px;
     background-color: blueviolet;
     padding: 10px 15px;
     color: #ffff;
     border-radius: 0 15px 15px 0;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
   }
 }

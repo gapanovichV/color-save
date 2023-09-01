@@ -10,13 +10,12 @@ interface PaletteProps {
 }
 export const Palettes  = ({className}: PaletteProps) => {
   const palettes = useSelector(getPalette)
-  console.log(palettes)
   return (
     <div className={classNames(cls.Palettes, className)}>
       {
         palettes.map((palette) => {
           return (
-            <Link className={classNames(cls.Link)} key={palette.id} to={Path.PALETTE + palette.id}>
+            <Link className={classNames(cls.Link)} key={palette.id}  to={Path.PALETTE + palette.id}>
               <div className={classNames(cls.Palette)}>
                 {
                   palette.colors.map((color, index) => {

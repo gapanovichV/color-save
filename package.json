@@ -12,7 +12,10 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-color-palette": "^7.0.4",
+    "react-dom": "^18.2.0",
+    "vite-plugin-react-svg": "^0.2.0",
+    "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
     "@reduxjs/toolkit": "^1.9.5",
